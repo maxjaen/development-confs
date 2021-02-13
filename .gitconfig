@@ -1,0 +1,60 @@
+; git config --global alias.<alias> "<git command>"
+; HEAD is a reference to the latest commit
+; HEAD^ is a reference to the commit before the latest commit
+
+[user]
+	; name = <my name>
+	; email = <my email>
+[alias]
+	; init a new repository
+	i = init
+	; check repository status
+	st = status
+	; switch to another branch
+	sw = switch
+	; remove current changes and safe for later usage
+	s = stash
+	; apply latest changes on stash to working directory
+	sp = stash pop
+	; remove from stash
+	sd = stash drop
+
+	; commit files
+	cm = commit -m
+	; commit files ammend
+	ca = commit --amend --no-edit
+	; show changes in staged area
+	dfc = diff --cached
+
+	; remove changes from all unstages files
+	coa = checkout -- .
+	; remove specified change from staged area
+	rs = restore --staged
+	; remove changes from all files in staged area
+	rsa = restore --staged -- .
+
+	; Pick a commit from another branch
+	cp = cherry-pick
+	; Push branch
+	poh = push origin HEAD ;HEAD:<branch>
+	; Forse push the current branch
+	wtf = push -f
+
+	; show local branches
+	bsl = branch
+	; show remote branches
+	bsr = branch -r
+	;show all branches
+	bsa = branch -a
+	; create a new branch
+	bc = checkout -b
+	; delete the specified local branch
+	bdl = branch -d
+	; delete the specified remote branch
+	bdr = push origin --delete
+
+	; git graph view in pretty
+	lg0 = log --pretty=format:'%C(green)%h%C(reset) %C(red)%an%C(reset) %C(blue)%ad%C(reset) %C(yellow)%s%C(reset)' --date=short
+	lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+	lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+	lg = !"git lg1"
