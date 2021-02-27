@@ -68,7 +68,9 @@ ZSH_THEME="pygmalion"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting history-substring-search colored-man-pages extract history k)
+
+# git, colored-man-pages, extract and history directly come with ohmyzsh, not necessary to install them
+plugins=(zsh-autosuggestions zsh-syntax-highlighting history-substring-search k git colored-man-pages extract history)
 
 source $ZSH/oh-my-zsh.sh
 
