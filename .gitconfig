@@ -5,6 +5,10 @@
 [user]
 	; name = <my name>
 	; email = <my email>
+[remote "origin"]
+	prune = true
+[pull]
+	rebase = true
 [alias]
 	; init a new repository
 	i = init
@@ -12,6 +16,9 @@
 	st = status
 	; switch to another branch
 	sw = switch
+	; prune operation for fetching
+	fp = fetch --prune
+
 	; remove current changes and safe for later usage
 	s = stash
 	; apply latest changes on stash to working directory
