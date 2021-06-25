@@ -1,0 +1,49 @@
+{
+    "cSpell.enabledLanguageIds": [
+        "css",
+        "html",
+        "javascript",
+        "python",
+        "scss",
+        "typescript"
+    ],
+    "css.lint.important": "warning",
+    "scss.lint.important": "warning",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.cursorStyle": "line" ,
+    "editor.cursorBlinking": "smooth" ,
+    "editor.fontSize": 16,
+    "editor.linkedEditing": true,
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "boundary",
+    "editor.rulers":[120],
+    "eslint.alwaysShowStatus": true,
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "git.inputValidationSubjectLength": 50,
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "javascript.preferences.quoteStyle": "single",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "typescript.preferences.quoteStyle": "single",
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "sonarlint.disableTelemetry": true,
+    "sonarlint.output.showAnalyzerLogs": true,
+    "sonarlint.output.showVerboseLogs": true,
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    "terminal.integrated.fontSize": 16,
+    "window.zoomLevel": -1,
+    "window.title": "${activeEditorLong}${separator}${rootName}",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    "workbench.colorTheme": "Atom Material Theme",
+    "workbench.editor.highlightModifiedTabs": true
+}
