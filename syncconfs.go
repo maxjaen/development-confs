@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"os"
 	"os/user"
-    "io/ioutil"
+	"io/ioutil"
 	"log"
 )
 
@@ -49,40 +49,40 @@ func filesExists(fileNames []string) bool {
 }
 
 func fileExists(fileName string) bool {
-    info, err := os.Stat(fileName)
-    if os.IsNotExist(err) {
-        return false
-    }
-    return !info.IsDir()
+	info, err := os.Stat(fileName)
+	if os.IsNotExist(err) {
+		return false
+	}
+	return !info.IsDir()
 }
 
 func copyFile(src string, dst string) {
 	fmt.Println(fmt.Sprintf("%s %s to %s", toBlueStr("Copy"), src, dst))
 
-    data, err := ioutil.ReadFile(src)
-    checkError(err)
-    err = ioutil.WriteFile(dst, data, 0644)
-    checkError(err)
+	data, err := ioutil.ReadFile(src)
+	checkError(err)
+	err = ioutil.WriteFile(dst, data, 0644)
+	checkError(err)
 }
 
 func deleteFile(filePath string) {
 	fmt.Println(fmt.Sprintf("%s %s", toRed("Delete"), filePath))
 
 	err := os.Remove(filePath)
-    checkError(err)
+	checkError(err)
 }
 
 func getUserHomeDir() string {
 	usr, err := user.Current()
-    checkError(err)
+	checkError(err)
 
 	return usr.HomeDir
 }
 
 func checkError(err error) {
-    if err != nil {
-        log.Fatal(err)
-    }
+	if err != nil {
+		log.Fatal(err)
+	}
 }
 
 func toBlueStr(str string) string {
